@@ -10,10 +10,9 @@ const app = express()
 app.set('port', process.env.PORT)
 const dbOptions = {
     host: 'us-cdbr-east-06.cleardb.net',
-    port: 3306,
-    user: 'bc7c6e2bc89178',
-    password: 'ffa8caa0',
-    database: 'apideploy63'
+    user: 'b781a1707a7b0a',
+    password: '2f275e40',
+    database: 'heroku_eab5df1206bdc89'
 }
 
 // middlewares -------------------------------------
