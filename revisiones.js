@@ -17,7 +17,7 @@ routes.get('/:idpacientes1', (req, res)=>{
     req.getConnection((err, conn)=>{
         if(err) return res.send(err)
         const { idpacientes1 } = req.params;
-        conn.query(`SELECT numeroRevision, descripcion,dosis, medicacion, fecha, paciente FROM revisiones INNER JOIN pacientes1 ON revisiones.paciente = pacientes1.idpacientes1 WHERE idpacientes1 = ?`,idpacientes1,(err, rows)=>{
+        conn.query(`SELECT numeroRevision, descripcion, dosis, medicacion, fecha, paciente FROM revisiones INNER JOIN pacientes1 ON revisiones.paciente = pacientes.idpacientes1 WHERE idpacientes1 = ?`,idpacientes1,(err, rows)=>{
             if(err) return res.send(err)
             res.json(rows)
         })

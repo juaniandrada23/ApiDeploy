@@ -25,7 +25,7 @@ app.use(cors())
 app.get('/', (req, res)=>{
     const content = `
     <h1>Server con Express</h1>
-    <pre>primera prueba de servidor con Node y el framework Express</pre>
+    <pre>Servidor creado como prueba para APP de Gestion Medica con Node y el framework Express</pre>
     `;
   res.send(content);
 })
